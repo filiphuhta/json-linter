@@ -5,81 +5,17 @@
   <meta charset="UTF-8">
   <title>JSON Linter</title>
   <script language="javascript" type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    src="code-mirror/codemirror.min.js"></script>
   <script language="javascript" type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/perl/perl.min.js"></script>
+    src="code-mirror/perl.min.js"></script>
 
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+    href="code-mirror/codemirror.min.css">
   </link>
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/dracula.min.css">
+    href="code-mirror/dracula.min.css">
   </link>
-  <style>
-    body {
-      background-color: #1c1c1c;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #f1fa8c;
-    }
-
-    .CodeMirror {
-      height: 30rem;
-      margin-bottom: 2rem;
-    }
-
-    button {
-      background-color: #44475a;
-      color: #f1fa8c;
-      font-family: inherit;
-      font-size: 16px;
-      line-height: inherit;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #6272a4;
-    }
-
-    button:active {
-      background-color: #6272a4;
-    }
-
-    .success {
-      color: #50fa7b;
-    }
-
-    .error {
-      color: #ff5555;
-    }
-
-    .success textarea {
-      border: 2px solid #28a745;
-    }
-
-    .error textarea {
-      border: 2px solid #dc3545;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="line-numbers">
@@ -90,50 +26,7 @@
     <button id="clear">Clear</button>
     <div id="output"></div>
   </div>
-
-  <script>
-    const input = document.getElementById('input');
-    const validate = document.getElementById('validate');
-    const output = document.getElementById('output');
-
-    function validateJSON() {
-      try {
-        const json = JSON.parse(editor.getValue());
-        const formattedJson = JSON.stringify(json, null, 2);
-        editor.setValue(formattedJson);
-        output.innerText = 'JSON is valid!';
-        output.className = 'success';
-        input.className = '';
-      } catch (error) {
-        output.innerText = error.message;
-        output.className = 'error';
-        input.className = 'error';
-      }
-    }
-
-    input.rows = 10;
-    input.cols = 80;
-    validate.addEventListener('click', validateJSON);
-
-    // Clear button
-    const clear = document.getElementById('clear');
-
-    function clearInput() {
-      editor.setValue('');
-      editor.clearHistory();
-      output.innerText = '';
-      input.className = '';
-    }
-
-    clear.addEventListener('click', clearInput);
-  </script>
-  <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("input"), {
-      mode: "json",
-      lineNumbers: true,
-      theme: "dracula"
-    });
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
