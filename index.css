@@ -9,9 +9,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 4rem;
 }
 
 h1 {
@@ -63,6 +61,8 @@ button:active {
 }
 
 .CodeMirror {
+  position: relative;
+  left:10px; top:10px;
   width:  calc(80vw - 20px);      /* calc and viewport to the rescue */
   height: calc(80vh - 20px);
 }
