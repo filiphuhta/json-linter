@@ -14,7 +14,13 @@ body {
 
 h1 {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+  color: #f1fa8c;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
   color: #f1fa8c;
 }
 
