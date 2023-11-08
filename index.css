@@ -25,6 +25,8 @@ h2 {
 }
 
 button {
+  border-radius: 6px;
+  border-width: 0;
   background-color: #44475a;
   color: #f1fa8c;
   font-family: inherit;
@@ -38,7 +40,7 @@ button {
 
 }
 
-button:nth-child(2) {
+#clear {
   margin-left: 0.5rem;
 }
 
@@ -53,13 +55,14 @@ button:active {
 .success {
   color: #FAFAFA;
   background-color: #00ff414f;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .error {
   color: #FAFAFA;
   background-color: #ff07077a;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   padding: 1rem;
 }
 
