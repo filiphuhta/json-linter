@@ -24,11 +24,6 @@ h2 {
   color: #FAFAFA;
 }
 
-.CodeMirror {
-  height: 25rem;
-  margin-bottom: 2rem;
-}
-
 button {
   background-color: #44475a;
   color: #f1fa8c;
@@ -80,7 +75,8 @@ button:active {
   position: relative;
   left:10px; top:10px;
   width:  calc(80vw - 20px);      /* calc and viewport to the rescue */
-  height: calc(80vh - 20px);
+  height: calc(60vh - 20px);
+  margin-bottom: 2rem;
 }
 
 /* Set the scrollbar width and hide the default scrollbar */
