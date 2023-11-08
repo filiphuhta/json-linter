@@ -57,6 +57,7 @@ button:active {
   background-color: #69F0AE;
   margin-top: 1rem;
   padding: 1rem;
+  width:  calc(80vw - 20px);     
 }
 
 .error {
@@ -64,6 +65,7 @@ button:active {
   background-color: #EF9A9A;
   margin-top: 1rem;
   padding: 1rem;
+  width:  calc(80vw - 20px);     
 }
 
 .success textarea {
