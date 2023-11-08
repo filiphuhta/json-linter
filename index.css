@@ -40,6 +40,11 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+}
+
+button:nth-child(2) {
+  margin-left: 0.5rem;
 }
 
 button:hover {
@@ -51,11 +56,16 @@ button:active {
 }
 
 .success {
-  color: #50fa7b;
+  color: #FAFAFA;
+  background-color: #00ff414f;
+  margin-top: 0.5rem;
 }
 
 .error {
-  color: #ff5555;
+  color: #FAFAFA;
+  background-color: #ff07077a;
+  margin-top: 0.5rem;
+  padding: 1rem;
 }
 
 .success textarea {
