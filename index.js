@@ -27,7 +27,8 @@ function clearInput() {
 clear.addEventListener('click', clearInput);
 
 let editor = CodeMirror.fromTextArea(document.getElementById("input"), {
-  mode: "json",
+  mode: "javascript",
   lineNumbers: true,
+  json: true,
   theme: "dracula"
 });
